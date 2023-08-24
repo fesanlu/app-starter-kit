@@ -17,7 +17,7 @@ def load_csv(input_csv):
 
 # Generate LLM response
 def generate_response(csv_file, input_query):
-  llm = ChatOpenAI(model_name='gpt-3.5-turbo-0613', temperature=0.2, openai_api_key=openai_api_key)
+  llm = ChatOpenAI(model_name='gpt-3.5-turbo-0613', temperature=0.2, openai_api_key='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')
   df = load_csv(csv_file)
   # Create Pandas DataFrame Agent
   agent = create_pandas_dataframe_agent(llm, df, verbose=True, agent_type=AgentType.OPENAI_FUNCTIONS)
@@ -33,7 +33,7 @@ question_list = [
   'How many rows have MolLogP value greater than 0.',
   'Other']
 query_text = st.selectbox('Select an example query:', question_list, disabled=not uploaded_file)
-openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not (uploaded_file and query_text))
+openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=yes (uploaded_file and query_text))
 
 # App logic
 if query_text is 'Other':
