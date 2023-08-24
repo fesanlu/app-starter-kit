@@ -33,7 +33,6 @@ question_list = [
   'How many rows have MolLogP value greater than 0.',
   'Other']
 query_text = st.selectbox('Select an example query:', question_list, disabled=not uploaded_file)
-openai_api_key = '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'
 
 # App logic
 if query_text is 'Other':
