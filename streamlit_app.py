@@ -1,8 +1,12 @@
 import streamlit as st
+import os
 import pandas as pd
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import create_pandas_dataframe_agent
 from langchain.agents.agent_types import AgentType
+
+# Set apikey openai
+openai_api_key = st.secrets["openai_api_key_secreta"]
 
 # Page title
 st.set_page_config(page_title='🦜🔗 Ask the Data App')
